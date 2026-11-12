@@ -16,10 +16,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${GITHUB_ACTION_PATH}/notify.sh
-      shell: bash
-      env:
-        WEBHOOK: ${{ inputs.webhook }}
-        ENV: ${{ inputs.env }}
-        APPLICATION: ${{ inputs.application }}
-        VERSION: ${{ inputs.version }}
+    - shell: bash
+      run: |
+        echo "::warning title=Microsoft Teams Webhook Deprecation::Microsoft has deprecated the Office 365 Connectors (Incoming Webhooks) for Microsoft Teams. Please migrate to Power Automate Workflows or another supported integration."
