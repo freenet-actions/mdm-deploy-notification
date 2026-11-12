@@ -1,15 +1,10 @@
 # MDM Deploy Notification
 
-This action is used to send a notification to Microsoft Teams when a deployment finished
-
-## Usage
-
-```yaml
-- name: Send notification to Microsoft Teams
-  uses: freenet-actions/mdm-deploy-notification@main
-  with:
-    webhook: URI of the webhook # should be stored as secret
-    env: Name of the environment
-    application: Name of the application
-    version: Version of the application
-```
+> [!WARNING]
+> **Deprecation Notice**
+>
+> Microsoft retired the legacy Office 365 Connectors (Incoming Webhooks) for Microsoft Teams in May 2026.
+>
+> This action currently uses the legacy Incoming Webhook interface and will therefore no longer work.
+>
+> Please migrate to a supported alternative, such as Microsoft Teams Workflows (Power Automate).
